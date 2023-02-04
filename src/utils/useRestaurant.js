@@ -7,7 +7,7 @@ const useRestaurant = (resId) => {
   const [restaurant, setRestaurant] = useState(null);
   //Get Data From API
   useEffect(() => {
-    return getRestaurants();
+    getRestaurants();
   }, []);
 
   async function getRestaurants() {

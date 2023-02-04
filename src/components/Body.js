@@ -30,6 +30,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    console.log("json", json);
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
@@ -113,6 +114,7 @@ const Body = () => {
           <h1>No restaurant match your filter.</h1>
         ) : (
           filteredRestaurants?.map((restaurant) => {
+            console.log("restaurant", restaurant);
             return (
               <Link
                 to={"/restaurant/" + restaurant.data.id}

@@ -4,6 +4,7 @@ import useOnline from "../utils/useOnline";
 import { Title } from "./Title";
 import UserContext from "../utils/userContext";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const loggedInUser = () => {
   //API call to check authentication.
@@ -19,6 +20,9 @@ export const Header = () => {
 
   const { user } = useContext(UserContext);
 
+  const cartItems = useSelector((store) => store.cart.items);
+
+  console.log("cartItems", cartItems);
   // console.log("render");
   // const [getLocalVariables, setLocalVariable] = useLocalStorage();
   return (
@@ -40,7 +44,9 @@ export const Header = () => {
           <li>
             <Link to="/instamart">Instamart</Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link to="/cart">Cart {cartItems.length} items</Link>
+          </li>
         </ul>
       </div>
 

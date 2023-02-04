@@ -8,6 +8,7 @@ import Body from "./components/Body.js"; // we can write the extension as well b
 
 // Sometimes using extensions can break whenever u r using the external library.
 
+import { Provider } from "react-redux";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/Contact";
@@ -18,7 +19,9 @@ import Shimmer from "./components/Shimmer";
 //OR
 import * as obj from "./components/Footer"; // We can do this.
 import UserContext from "./utils/userContext";
-//import Instamart from "./components/Instamart";
+import Instamart from "./components/Instamart";
+import store from "./utils/store";
+import Cart from "./components/Cart";
 const Footer = obj.Footer;
 
 //Config Driven UI:
@@ -26,9 +29,9 @@ const Footer = obj.Footer;
 // it is for lazy loading. It is a dynamic import.
 //On demand loading, on demand import, dynamic import, code splitting, bundle chunking.
 //Upon on demand loading => Upon render => React suspends the loading.
-const Instamart = lazy(() => {
-  import("./components/Instamart"); //Give path of the file here. // It returns a promise.
-});
+// const Instamart = lazy(() => {
+//   import("./components/Instamart"); //Give path of the file here. // It returns a promise.
+// });
 
 const AppLayout = () => {
   const [user, setUser] = useState({
@@ -37,14 +40,14 @@ const AppLayout = () => {
   });
 
   return (
-    <>
+    <Provider store={store}>
       {/* similar to React.Fragment */}
       <XYZ.Header />
       <UserContext.Provider value={{ user: user, setUser: setUser }}>
         <Outlet />
         <Footer />
       </UserContext.Provider>
-    </>
+    </Provider>
   );
 };
 
@@ -75,12 +78,20 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/instamart",
-        element: (
-          <Suspense fallback={<Shimmer />}>
-            <Instamart />
-          </Suspense>
-        ),
+        element: <Instamart />,
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      // {
+      //   path: "/instamart",
+      //   element: (
+      //     <Suspense fallback={<Shimmer />}>
+      //       <Instamart />
+      //     </Suspense>
+      //   ),
+      // },
     ],
   },
 ]);
@@ -116,6 +127,10 @@ const appRouter2 = createBrowserRouter([
       {
         path: "/instamart",
         element: <Instamart />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
