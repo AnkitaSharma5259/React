@@ -1,0 +1,140 @@
+Redux: How can we manage our data efficiently?
+What are two types of layer?
+UI layer and Data Layer.
+
+What is inside th eUI layer? The view what u see on the web page.
+What do u write inside ur code that powers the UI layers => Its JSX.
+
+What is the data layer?  context is the part of data layer.
+
+For handling large amount of data we use Redux library.
+We need Redux to manage our data layer of the application.
+Redux os that place where u handle data.
+
+Why do we use useContext / Context? To avoid prop drilling.
+
+Context is a central place.
+Any component in ur app can access ur context and any component in ur app can just modify ur context.
+
+But when ur application grows a lot then libraries like redux come into picture.
+
+Indtead of creating different context, we can create a redux store.
+
+Why do we use Redux? It is used for data management,
+Problem with Redux.
+It is complex to setup.
+
+redux toolkit is a new way of doing redux.
+
+Difference between redux and redux toolkit:
+1. Configuring a redux store is too complicated.
+2. I have to dd a lot of pkgs o get Reduxto do anything useful.
+3. Redux requires too much biolerplate code.
+
+What is a redux store? : 
+At the end of the day, it is like a big object. which has different sections.
+
+Just liek our context what components will be able to access the redux store? All components.
+It is a different store all together.
+
+We can have multiple contexts. But in redux we will have a single store.
+
+We will create slices of our store.
+Each store can have different slices of store.
+What all slice can have our app have? authenticationslice, theme slice, cart slice.
+
+Our components cannot directly modify the store.
+We will have to dispatch an action.
+
+store, slice, action, dispatch.
+We always dispatch an action.
+This action will call a function and this function will modify the slice of the store.
+This function is known as reducer.
+
+This is writing in the store:
+If I click on the + button then => 
+It dispatches an action -> calls fn - reducer -> modify/updates slice of the store.
+                      calls reducer function
+
+If I click on the add  button, it dispatches an action which calls a reducer function and which updates the slice in the redux store.
+
+But how will I read that cart now?  Now how to read from the store.
+
+Selector will give u the information or selector is used for reading from the store.
+
++ => dispatches an action => calls reducer function => updates the slice of the store => 
+selector => updates the cart.
+
+selecting the slice out of that store. Selecting the portion of the store => this will update my cart.
+Selector is a hook and hook is a function at the end of the day. useSelector (hook).
+
+Selector means subscribing to the store.
+
+Cart component has subscribed to the store which means that whenever mystore will modify , 
+my cart will automatically modify.
+
+Redux job is to maintain or manage the store that is core of redux.
+Why 2 libraries?  
+npm i @reduxjs/toolkit (core library of redux)
+npm i react-redux (bridge between redux and react)
+
+we can provide this store to our whole application.
+I will provide this store to my whole app. check app.js
+
+Provider will come from react-redux. Because we want to connect react and redux.
+This provider is a component.
+We can provide this store to pur application using provider.
+<Provider store={store}> we r passing props to provider component.
+assign our store into our react application.
+</Provider>
+
+Our store should contain slices.
+creating slices is the core of redux. import { createSlice } from "@reduxjs/toolkit";
+
+We will modify our cart by creating a reducer funtion.
+
+Steps:
+1. create store
+   configureStore() - RTK
+
+2.Provider my store to App.
+ <Provider store={store}> -> import from react redux
+
+3. Slice
+  createSlice -> import from RTk
+  createSlice = ({name:"",
+                  initialState: ,
+                  reducers:{
+                    addItem: (state,action)=>{
+                        state.items.push(action.payload)
+                    }
+                  }})
+
+export default cartSlice.reducer;
+
+export {addItem, removeItem} = cartSlice.actions;
+
+4. Put that slice into store.
+const store = configureStore({
+  reducer: {
+    cart: cartSlice,
+    user: userSlice
+  },
+});
+
+5. Subscribe to the store.
+
+useSelector gives u access to the store directly.
+
+Middlewares. , RTK query.
+
+// Thunk and Saga.
+
+
+
+
+
+
+
+
+

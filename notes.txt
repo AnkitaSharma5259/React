@@ -1,0 +1,857 @@
+npm:  manages all your packages.
+It is like maven for UI.for react.
+
+npm i -D parcel to install the parcel.
+
+Package.json: same options u give during npm init come over here.
+
+Parcel: The zero configuration build tool for the web.
+we dont want parcel on production. 
+-D or --save-dev install as dev dependency.
+--save for installing dependency as prod dependency.
+Dependency is all the packages that our project needs.
+
+package-lock.json : locks the version and will keep it safe.
+To know what exact version do we need to use on production. Package lock will tell you what version of the library we r using.
+It will tell us the exact version we r using. 
+
+1. It is very imp file. It locks the version. Never keep it in .gitignore.
+2. Always add package-lock.json to your git reporsitory.
+3. Maintains the exact version of packages. It maintains or keeps the hash of it. 
+4. It maintains the integrity.
+5. Node_Modules is like a database of your npm.
+6. browserslist will make our app compatible to older versions of browsers.
+7. Never add node_modules in your git repository. Because our package-lock.json file has sufficient information to recreate node modules 
+   on production server.
+
+
+
+ "devDependencies": {
+    "parcel": "^2.8.2" //carrot means Our project will automatically upgrade to minor versions eg: 2.8.3 
+  } 
+ 
+ ~ tilde // Will update to major versions.
+
+ if no carrot or tilde then it means we want specific version only.
+
+ npx parcel index.html: execute parcel with entry point. // Ignite our app. Execute parcel and give the entry point as index.html
+
+ npx: execute using npm.
+
+Never touch node modules and package-lock.json file.
+
+Parcel: Enables
+1. Hot Module Replacement (HMR) 
+2. File Watchers Algorithm - C++ (This algorithm is written in c++)
+3. Parcel need some space thats why parcel-cache
+4. npx parcel index.html : It just creates a development build for us and is hosted on our server.
+5. npx parcel build index.html : Make a production build . 
+    It will minify ur files and parcel will build all production files into dist folder.
+6.  Remove  "main": "App.js" from package.json because we r already telling parcel the entry point in command only. i.e npx parcel build index.html
+7.  BUNDLING
+8.  MINIFICATION
+9.  Cleaning our code.
+10. Media, images takes lot of time to load on web browser. 
+11. Manages Dev and Production build and is super fast build algorithm.
+12. Image optimization.
+13. Caching while development or while building the code.
+14. Compression of the code. eg: const f=n(i).createElement("h1",{id:"title"},"Heading 1 from parcel")
+15. Compatible with older version of browser.(Adds pollyfills)
+16. We can enable https on dev machine.
+17. npx parcel index.html --https  (npx parcel entry of your app) (create a dev build and .parcel-cache and created a server for you)
+18. Parcel manages your port number as well.
+19. We should put parcel-cache in .gitignore file
+20. Anything which can be auto generated on server can be put inside .gitignore file.
+21. Consistent hashing algorithm.
+22. Zero config bundler.
+23. Tree Shaking -> Removing unwanted code. Suppose we have a library and it has 10-20 helper functions and we just want to use 2 or we 
+r just using 2 helper functions then parcel will remove or ignore all other functions and will not import them into our code.
+24. Transitive dependencies
+25. Reduces overall load time.
+
+
+Transitive dependencies: we have our package manager which handles and takes care of our transitive dependencies.
+(Dependency tree) (Dependency over other Dependency and so on) known as transitive dependencies.
+
+npm init -y : it will not ask for any configurations. It will just skip them.
+npx create-react-app
+
+Basic Foundation of React: i.e JSX and Babel.
+Package.json : it is a configuration which npm uses to manage dependencies.
+
+Pollyfill is a code which is a replacement for a newer version of code.
+Babel is just a library , just a node package. Converts into another code means es6 to es5.
+Modern js is converted into older js and that is known as pollyfill.
+
+git init gives .gitignore file. It initializes our repo with git.
+git init command will make your code compatible with git.
+
+npx : Executing a package without downloading it.
+npm is used when you want things to be installed inside your project.
+
+Assume 
+npx == npm run
+
+Parcel do not remove console.logs directly. You have to configure your project to remove console logs.
+
+Babel plugin transform remove console.
+
+babel and parcel does not remove console logs automatically, u will have to configure.
+There is a pkg which can help us in removing console logs. (babel-plugin-transform-remove-console).
+npmjs.com
+npm install babel-plugin-transform-remove-console --save-dev or
+npm install babel-plugin-transform-remove-console -D
+
+.babelrc: it is a configuration file for babel.
+
+The Diffing Algorithm.
+render : Updating something in the DOM.
+
+We always have to give keys to our children.
+React tracks this key as a unique thing.
+
+React will have to rerender everything. React will have to 
+Render: Updating something in the DOM.
+React will have to do very less work. Using keys react will inject only that element and will not rerender everything.
+we can pass keys as a prop.
+should never have same key for 2 elements. It should be unique for each element.
+
+   --Babel--
+JSX => React.createElement => Object => HTML(DOM)
+
+Babel is a javascript transpiler/compiler.
+
+React.createElement: It gives us an object.
+what happens with the object: It is converted to an html element and put it on the DOM.
+
+JSX: we want to update html using js in a better way. 
+JSX uses React.createElement behind the scenes and then it is converted to object and then html element.
+How does our jsx get exceuted?
+Babel converts jsx to html. 
+It creates abstract syntax tree.
+
+How does JSX execute? Browser does not understand JSX code. But Babel understands it.
+Babel is just another javascript library which reads your code.
+
+    --Babel-- converts jsx to React.createElement .
+JSX => React.createElement => Object => HTML(DOM)
+React DOM convert or complies this html and puts it into DOM.
+
+JSX is html like syntax.
+We wanted to update our whole html using javascript (this was the philosophy)
+JSX is not react. React.createElement is react.
+
+Advantages of JSX:
+
+Syntactical sugar,
+Readability, (Most important concept)
+less code.
+Good to maintain,
+developer friendly
+
+package-lock.json inside node_modules folder have all the details of transitive dependencies.
+
+JSX is not a pkg so it is not need to be imported.
+JSX is a syntax. means jsx expression. (<h1 id="title" key="h2">Namaste React</h1>);
+
+Everything is a component in react.
+React components.
+1. Functional: new way of writing code. it is nothing but a javascript function that return some piece of jsx. 
+2. Class based components: Always existed. Old way.
+
+
+Functional: new way of writing code. it is nothing but a javascript function that return some piece of jsx or a react element 
+or a component. If the code is of multi line then put it inside paranthesis.
+{} // Any peice of js code we can write inside paranthesis.
+Name of the component starts with capital letter. but not mendatory, It s good practice.
+
+xss attack. cross site scripting.
+jsx make it sure ur data is secure. it does sanitization.
+react.render(<Title/>);
+ componenet inside component , known as component composition or composing components. Or nesting components.
+
+the diffing algorithm.
+react consilation key.
+
+Babel is long back and jsx is new.
+jsx will not work if parcel is not installed but atleast use babel then.
+
+<Title/> this is the best way instead of paranthesis {Title()}
+if u have to use JSX then babel is needed.
+
+parcel and webpack is not mendatory.
+
+Is the component hoisted? IT behaves exactly the same as js functions work.
+
+We can render react component then why we need functional component.
+
+find out alternatives of babel.
+
+Why react is faster? React has it own way of optimizing things.
+Their algorithms, and uses virtual DOM.
+
+
+Babel uses new peice of code. Babel takes ur code and creates pollyfill for it.
+
+js browser does not understand jsx and babel.
+
+babel playground. babeljs.io
+
+node version should be in sync with the parcel.
+
+
+//JSX: This is a html like syntax but it is not html inside javascript.
+  const heading3 = (
+        <h3 id="title" key="h3">
+        Namaste React
+        </h3> 
+  ) //if we are writing this in multiple lines then we have to wrap this in paranthesis.
+  //Perfectly valid javascript code and is known as JSX. This is not a string.
+
+Difference between html and JSX: study about this.
+How to create image tag inside jsx?
+
+
+
+Cross-site Scripting attack. XSS attack.
+const data = api.getData();
+
+const HeaderComponent2 = () => {
+    return (
+        <>
+            {data} // javascript jsx takes care of any data. It is safe. It will escape it first. It will make sure your app is safe from any kind of xss.
+            //It does sanitization
+        </>
+    )
+  }
+
+
+Use Effect is called after the component is rendered.
+Takes two arguments.
+
+1.One is callback function. (callback function is called after render).
+2. second is dependency array
+
+on empty array, only once after the initial render.
+If we have a state variable over here, this is the dependency array, component rerenders and callback function is called after render.
+
+if no dependency, then useEffect will be called after each render.
+
+[] -> useEffct will only be called once after initial render.
+
+Why CDN? Why cdn is the best wau to store images?
+1. Caching.
+2. 100% uptime.
+3. Cannot optimize images after it comes to browser. So we first optimize the image and then put it to the CDN.
+
+Never create a component inside a component.
+
+Important things about Hooks:
+1. Never ever write useState inside if else.
+2. Never write it inside a for loop.
+3. UseState hook to create local state variable inside ur functional component so never use usestate outside of functional component.
+4. We can use more than one useEffect.
+
+npm pkg: react-shimmer.
+
+npm is-odd
+
+When things get complex then only import a big pkg.
+
+formik.org: formik is a world's most popular open source form library for react and react native. Build forms in react.
+It becomes very easy to build forms in rect using formik library.
+
+React Router DOM:
+
+createBrowserRouter : function we get from react-router-dom. It helps us to create function.
+There is a component RouterProvider which is coming from react-router-dom.
+
+place we define what will define if i go to /about page.
+we need to create routing configuration.
+
+Always create this below applayout.
+
+const appRouter = createBrowserRouter([
+   {
+     path: "/"
+     element :<AppLayout/>
+   }
+]
+)
+
+There is a component RouterProvider coming from react-router-dom.
+
+Nested Routes.
+
+Nested routing / Nested components/ dynamic Routing
+
+Problem with anchor tag is : when u click on anchor page.it refreshes the whole page.
+
+Single Page application: React appliations are single page appliations.
+It does not reload. From HOME => About: Should not make any network call.
+
+There are two types of routing.
+1: Client side routing.
+2. Server side routing.
+
+SSR: It is the way that All our pages come from server.
+CSR: We dont want to load anything from server.
+
+Link gets converted to anchor tag.
+<Link to = "/about">
+ <li>About</li>
+</Link>
+
+Remix developer developed link tag.
+
+Link Component uses anchor tag behind the scenes.
+At the end of the day we need to convert link tos omething which browser understands, thats why link gets convert to a tag.
+react-router-dom is keeping track of the links.but browser understands anchor only so react-router-dom converts link tags to anchor tag behind the scenes.
+
+Outlet should render according to router configuration.
+All the childrens will go into the outlet according to the route.
+
+Outlet is like a placeholder/container where your components will fill in according to the route.
+Outlet is a named export component.
+
+Dynamic Segments/ Routing
+
+When u write ur code in moduler fashion, then u can reuse it a lot.
+
+HW: Build a login page using formik.
+Give hardcoded authentication.
+
+Make a habit of reading documentation.
+
+Create separate component for each logic or each functionality
+It will make ur code:
+modular
+readbale
+maintainable
+reusable
+testable
+cleaner
+
+Always keep using optional chaining.
+while doing homework check in browser how reconciliation is happening.
+
+We can use React.Fragment inside React.Fragment.
+
+Why React is fast? : It is because of its fast DOM Manipulation.
+React uses something known as virtual DOM and reconciliation.
+Virtual DOM: It is a represenatation of a DOM.
+We need virtual dom for reconciliation in react.
+Reconciliation: It is an algorithm which react uses to diff one tree from another to determine which parts need to be changed.
+i.e Actual and Virtual DOM and it finds out
+what needs to be updated and just update only that portion. It does not rerender whole application.
+
+It is a process where we have diff algorithm which finds out the difference between the trees.
+React will only rerender what it does not know on DOM. Based on key.
+It will only rerender the specific portions of your app which is found by diff algorithm. like git diff.
+
+React Fiber: It is a new reconciliation algorithm introduced in React 16.
+
+React uses one way data binding.
+
+React variable is kind of a state variable.
+Every component in react maintains a state.
+And u can put all your variables into an state.
+And everytime u need to create local variable u use state inside react.
+
+What is state variable?
+
+searchText is local state variable.
+  const [searchText, setSearchText] = useState(""); returns an array:
+  first variable of this array is the variable name. And the second variable is a function.
+
+A Hook is just a normal function.
+
+Function of useState is to create state variable.
+How do I give default value to useState variable by passing default value to useState hook as shown below.
+  const [searchText, setSearchText] = useState("");
+ 
+Learn about custom hooks.
+
+We can do something like this as well:
+
+const a = useState();
+const [b,setB] = a;
+
+Important interview question. When we have local variables why do we need state variables?
+
+Whenever a local variable changes, react will not know there is a change in variable and I have to rerender the UI.
+
+React watches state variables and keep track of state variables and not local variables.
+Whenever the state variable is updated, the whole component rerenders.
+It is just destroying the body component and creating body again.
+
+Reconciliation happens whenever a state of the variable changes.
+The component will be refreshed means retriggering the reconciliation process and finding out the difference in nodes.
+and quickly update the virtual dom then update the actual dom. (React keeps virtual and actual DOMS in sync.)
+
+Single Big application
+MicroServices:
+
+Class Based Components:
+Earlier React started with class based components: There were no hooks earlier.
+It used to be very painful of writing code.
+
+How to make a nested route:
+//localhost:1234/about/profile. so dont give slash. /profile then localhost:1234/profile
+
+parentPath/{path}
+
+Findout?
+I cannot make the callback function as async inside useEffect.
+useEffect( async ()=> { // this is not allowed.
+
+});
+then why can we make ComponentDidMount as async?
+
+Sequence of methods which will be called:
+
+Disclaimer:
+Never compare React lifecycle methods to hooks of functional components.
+If u dont dependency array then useEffect will be called after eevery render.
+
+[] -> After one initial render.
+[count]
+
+ComponentDidUpdate method is called after every update. like [count] in useEffect.
+
+Why do we unmount? 
+We can make things scalabale by taking care of every 
+
+
+Optimizing our app:
+
+Code Splitting, lazy loading, how do we make large scale applications.
+
+How to create a custom hook? How can we build our own hooks?
+
+How many times componentDidMount is called? Only once.
+How many times componentDidUpdate will be called?  When we change our state. When we update something.
+What are the two phases of react lifecycle? Render and Commit Phase.
+First react runs all lifecycle methods of render Phase then commit Phase.
+Render Phase includes constructor and render method. Commit Phase is the phase where actually react is
+modifying your DOM.
+Render Phase is faster than commit Phase. because commit phase updates the DOM and updating the DOM is tough.
+so it will take some time.
+
+If no state or no props then there will be no update : 0 (componentDidUpdate will be called zero times then)
+Why componentWillUnmount is called for? For clean up. For destroying the component.
+
+Why should we build our own hooks? For Readability and Reusability and For separation of concern (maintainability).
+Modularity (Broken down code into meaningful pieces)
+
+Maintainable, (Easy to Debug)
+Testable,
+Reusable,
+Readable, 
+Modularity (We have broken down our code into meaningful pieces)
+
+NOTE:
+Always create custom hooks with the name use in front of it. It is a react way of knowing that it is a hook.
+
+By using utils, Readale, reusable, testable.
+
+By we say the code is maintable, then it is easy to debug.
+In helper.js generally use named export.
+but in utils default export.
+
+Everytime the user go online or offline everytime, a new eventlistener 
+
+Parcel: 
+Build files in Chunks. (Break down the bundle)
+Need to make logical bundles.
+
+System Design Interviews:
+In large scale applications, we build 
+When i will be doing bundling, i will make sure that my bundle does not include random code.
+I will be splitting my code and will be doing logical bundling.
+Because if we have 100s of components in our application and bundling all code into one file, will be a huge bundle.
+
+Bundlign is good to a limit. u can bundle everythingin ur app. u need to create logical bundles.
+So we will be doing: 
+
+Chunking
+Code Splitting
+Dynamic Bundling 
+Lazy Loading
+On Demand Loading
+Dynamic Import
+Upon on Demand loading => upon render => React suspends
+
+I will keep all images on CDN
+I will cache them.
+
+Swiggy Instamart Should be a different bundle.
+Now our main bundle will not have instamart.js file
+but when u go instagram page then it will create one more instamart.js file. And when u click on instamart.js file
+it gives error. Because react tries to render it which is not there. so in this process , react suspends the rendering.
+It takes some time to load the script but react tries to render which is not there, 
+so react suspends the rendering.
+When u load ur component on demand ,react tries to suspend it.
+
+
+React takes care of these components in a different fashion. React knows that these componenets will be lazily loaded.
+React will wait for a promise to resolve until it loads the component.
+<Suspense>
+            <Instamart />
+ </Suspense>
+
+ Chunking not needed for small apps. When we feel that bundle size of huge size then only do chunking.
+
+ We can have any peice of jsx as fallback.
+
+ HW: Create our own hooks.
+
+Good Practice:
+ Never Ever dynamically load your components inside your other components.
+ because it will be lazy loaded after every cycle.
+
+ for eg: if u r using Footer component inside app then never lazy load footer inside app. Put it on top of app component.
+ Write them on top where u write import.
+
+ We use frameworkj for CSS: 
+ for optimizing.
+
+ 1 way:  Basic native Css file. 
+ 2 way: SCSS At the end of the day SCSS is converted to basic CSS.
+ 3. Advantages of writing SCSS: Nesting, mixins, reusability, variables.
+ 4. Tailwind
+ 5. At the end of the day JSX is JS and later on browser takes it up as HTMl tags.
+ 6. 
+
+ 1. Basic native css file. eg: index.css
+ 2. SCSS
+ 3. Inline Css
+ 4. Component Libraries Or UI libraries like Material UI, base UI etc.
+ 5. BootStrap.
+ 6. Tailwind CSS Framework.
+ 7. ANT UI
+ 8. Chakra UI
+ 9. Styled Components: (This is also majorly used in react Projects)
+ We have brought HTMl inside JS likle JSX.
+ Lets bring CSS also in js file
+  Biggest pain for writing styled components:
+  Readability.
+
+ Style tags takes js object: 
+
+ const searchBtnCSS = {
+  backgroundColor: "red"
+ }
+
+ style={searchBtnCSS}
+
+ Or
+
+But this is not a good way of writing CSS: Why? Reusability and heardcoded, difficult to maintain.
+We cant reuse these classes.
+ style= {{
+  backgroundColor: "red"
+ }} means parsing javascript object inside my curly braces.
+
+What is Material UI? : We always common things in our webpage like buttons, calenders, menus, header etc.
+Who maintains Google:
+It is fully loaded component library.
+It has prebuilt components which has style.
+
+In Uber : base ui.
+ANT Design etc.
+
+Why are pros and cons of these libraries.
+1. Easy to use.
+2. Reusable
+3. Should not fous on css.
+4. We get a Consistent UI. All btns in my app will look same.
+
+Why do companies focus on design a lot because jo dikhata hai wo bikta hai.
+
+CONS of using these libraries? 
+1. Makes Bundle Size heavy.
+2. We lose lot of control on how my design looks.
+3. Personal customization becomes hard though development becomes fast.
+4. It restricts u in some way like many things dont work in older browsers or phones. Like components may look diff
+in laptop and may look different in mobile phones.
+
+Tailwind CSS Framework: 
+//text-lg // text-md (medium)
+use script tag to import tailwind.
+1. It removes all basic CSS and saya use tailwind CSS now.
+It overrides everything. Its like a beast and says , u have to write code in my way.
+Tailwind CSS always works with class name.
+Tailwind uses elastic earch at the end of the day.
+
+Pros:
+1. I can directly style it on the go.
+2. It is easier for dubugging CSS.
+3. Less code is shipped.
+4. No duplicate CSS
+5. Bundle size is less.
+6. Time is faster becuase u dont have to switch between the files.
+7. much more customizable and give lot of control over CSS.
+8. It is a newer way of writing css.
+9. With JSX and tailwind , u dont have to move out of ur jsx file.
+
+Cons:
+1. There is high learning curve associated with it.
+2. Suppose there r 100% engineers, how many percent of engineers would know tailwind, very less.
+3. There would be so many classes and it is not readable.
+4. It makes className looks little ugly.
+
+PostCSS: it is a tool which is used for compilation of these classes.
+We need to tell pur parcel that we r using tailwind. 
+
+content: [], : what files will be using the tailwind classes.
+There is something known as square bracket notation, where u can customize the css. eg: if u want to give exactly 200px
+eg: "w-[200px]"
+
+Parcel is taking help of postcss and tailwind libraray to compile all those classes and ship it into project.
+Tailwind css has 1000s of classes.
+
+Only the classes u use in ur project, will be shipped to production. It makes css or bundle size very small.
+What about dynamic classes? Tailwind creates a new dynamic clss for us. for writing w-[200px]:
+ef: .w-\200px\ {
+
+}
+
+Stick to native tailwind classs. dont write dynamic classes. Why? Tailwind understands us and it wont create a new class for it.
+so to mintain consistency.
+
+DATA IS THE NEW OIL:
+REDUX:
+THESE TWO LAYERs combine SPAs.
+UI LAYER
+DATA LAYER
+
+Babel converts jsx into html.
+
+Virtual DOM: is helpful for reconciliation.
+New diff is replicated into the actual dom.
+
+We manage UI with Props and State.
+Diff between state and prop:
+
+If in a container, u want a variable which has scope within that container or component, then it is known as state or local variable.
+
+Props: Value passed from one component to another component.
+If we have to pass data from one component to another component then we can use props.
+
+State mutable and props immutable.
+
+From Parent to children: Applayout to body then restaurant card.
+
+AppLayout: (Top Most Parent Component)
+(state=user)
+ - <Body user= {user}/> 1st child comp
+  - restaurantCard user={user} 2nd child comp
+   - <h4>{user}</h4> 
+
+Props Drilling: Passing data from one child to another child to other child and so on.
+Suppose u have data in ur parent and u want to access it in ur grandchildren then first pass data from parent to its children
+and so on. so u r drilling the props.
+
+React Developer Tools: Helps you debugging the data layer.
+
+Props are the properties which you are receiving inside the component.
+
+Props Drilling: a situation where data is passed from one component through multiple interdepedent components until 
+you get to the component where the data is needed.
+
+It shows 3 states means we have used useState 3 times in our code.
+
+What if I need to pass data from child to parent component? 
+There are various ways to do this:
+But there r very less cases where u will need data from children to parent.
+
+1. We can build our custom hook.
+2. Redux.
+3. 
+
+Disadvantages of prop drilling: 
+Prop Drilling is not a good practice. It makes ur code cluttered.
+If suppose ur data is needed under 10 levels then it is not a good way.
+
+If u change one thing in a single component, then it rerenders all those components which are using all those props.
+
+Accordion Component: Toggle Component.
+Currently components do not share state.
+Every section has its own state and has its own prop.
+
+We cannot directly modify the state of 
+
+This concept is known as lifting the state up:
+If the parent maintains a state, every children will listen to it.
+I will take the control of show /hide from this children to the parent.
+
+Profiling watches what u do on the web page.
+It shows how much every component took to load.
+U can see things in profiler and then optimize ur components accordingly.
+
+When u have to pass the data across the component. 
+U have to store it in a central space. Local storage is not reliable.Updating local storage is a heavy/costly operation. It is a pain.
+This central space is known as React Context, or Redux store. IT is like mobix or ngrx, flux.
+It is like a shared state for whole app and any component across the app can use that data.
+
+What is a context and how do we use it? 
+Why ? Because i want some piece of data acorss the app.
+
+Can we create a global variable: React is not tracking it.
+React is not watching it. It is not triggerring reconciliation.
+
+React Context: Context is shared so create it inside util . It is kind of big object.
+What is context at the end of the day?
+
+createContext is a function at the end of the day.
+
+Why do we need props? C an i keep everything inside use Context?
+
+State and Props are tied to the components. And useContext is used to keep central data.
+Context is like useState for ur whole big application.
+
+Does class components have hook?
+It does not have a hook.
+
+React router DOM uses Context behind the scenes.
+Redux also works on data layer.
+
+.postcssrc file
+// While u r bundling, we will be using tailwind, so to compile our tailwind that why we use postcssrc configuration.
+
+useEffect is a hook. At the end of the day useEffect is a function.
+
+useEffect(() => {
+// It will be called whenever useEffect wants it to be called.
+});
+
+useEffect gets call after every render. After every time when the component is rendered.
+If u dont want to call useEffect after every re-render pass an dependency array to it.
+
+useEffect(() => {
+// It will be called whenever useEffect wants it to be called.
+},[]);
+
+There are two times when the component is re-rendered.
+1: When the props changes.
+2: When the state changes.
+
+//Here whenever my searchText changes, useEffect will be called.
+ useEffect(() => {
+    console.log("Call this whenever my dependency is changed.");
+  }, [searchText]);
+
+//empty dependency array.
+ useEffect(() => {
+    console.log("use effect");
+  }, []); //It will be called only once in this case after initial render.
+
+ useEffect(() => {
+    console.log("use effect");
+  }, [searchText]); //It will be called only once in this case after initial render and everytime when searchText changes.
+
+ If we dont pass any dependency array then useEffect gets call after every render.
+
+//Conditional Rendering. 
+
+  We need to either render either a shimmer ui or a normal ui or a actual api data ui.
+
+  //Avoid rendering component. This is known as early return.
+
+  if (!allRestaurants) {
+    return null;
+  }
+
+{
+  //Only JS expressions will work over here and not statements. 
+  a=10; this is a statement. 
+}
+
+{
+  ((a=10), console.log(a)) // u can do this. Not it became an expression.
+}
+
+
+Class Based components:
+1 way
+1. constructor
+2. render
+3. componentDidMount
+
+2 way: In case of only 1 child
+Parent - Constructor
+AboutClass.js:26 Parent- render
+ProfileClass.js:26 child-constructor
+ProfileClass.js:75 child-render
+ProfileClass.js:52 child - Component Did Mount
+AboutClass.js:22 Parent- Component Did Mount
+
+3way: In case of two children
+Parent - Constructor
+AboutClass.js:26 Parent- render
+ProfileClass.js:27 Child- ConstructorFirst Child
+ProfileClass.js:77 Child-renderFirst Child
+ProfileClass.js:27 Child- ConstructorSecond Child
+ProfileClass.js:77 Child-renderSecond Child
+ProfileClass.js:53 Component Did MountFirst Child
+ProfileClass.js:53 Component Did MountSecond Child
+AboutClass.js:22 Parent- Component Did Mount
+
+4way: In case of an API call.
+
+Parent - Constructor
+AboutClass.js:26 Parent- render
+ProfileClass.js:27 Child- ConstructorFirst Child
+ProfileClass.js:77 Child-renderFirst Child
+AboutClass.js:22 Parent- Component Did Mount
+ProfileClass.js:48 Component Did MountFirst Child
+ProfileClass.js:77 Child-renderFirst Child
+
+This rerender cycle is known as updating.
+
+5 way: Remove all consoles from parent.
+
+Child Constructor
+Child Render
+Child ComponentDidMount
+API call inside ComponentDidMount
+After API call, it will setState
+What will happen when it set state. It will update.
+Child render will be called
+ComponentDidUpdate will be called. It gets call after every render/after every update.
+
+NOTE:
+ComponentDidMount will be called after first render. And ComponentDidUpdate will be called after every
+next render. 
+This can be achieved by useEffect in functional component.
+
+ComponentWillUnmount will be called when the component is removed from the DOM. Means when u go some other page.
+Why do we Unmount? 
+For cleanups. For removing unwanted listeners or clearing of timers or intervals.
+
+In case based components we will use UserContext as a component.
+<UserContext.Consumer>
+   //This takes a jsx which is a function. This function will have a value of whatever this context holds. 
+   {(value) => {console.log(value)}}     
+</UserContext.Consumer>
+It is consuming things up.
+
+u can modify ur usercontext using a provider.
+in ur userContext u can provide the value, u can override the value inside userContext using UserContext.Provider
+It will modify the user according to my useEffect where I will be making an API call.
+
+so whenever my user will modify , user will get modify in all the places where we r using context
+I can modify context for a small portion of my app.
+
+react-router-dom uses context behind the scenes.
+
+Redux works in a data layer.
+
+If u refresh the page, it will reset the value of context.And it will show initial value.
+
+JXS we write to build a UI layer. JXS is converted to objects at the end of the day by react.
+This big object structure is known as virtual DOM.
+
+
+useAuth , useLocalStorage which will give u access to local storage hooks.
