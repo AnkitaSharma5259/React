@@ -1,6 +1,7 @@
 import { IMG_CDN_URL } from "./constant";
 
 const FoodItem = ({ name, description, cloudinaryImageId, price }) => {
+  console.log("cloudinaryImageId", cloudinaryImageId);
   return (
     <div className="card">
       <img src={IMG_CDN_URL + cloudinaryImageId} />

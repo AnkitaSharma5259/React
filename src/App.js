@@ -8,6 +8,8 @@ import Body from "./components/Body.js"; // we can write the extension as well b
 
 // Sometimes using extensions can break whenever u r using the external library.
 
+//import ToDoList from "./TODOLIST/ToDoList";
+import ToDoList from "./TODOLIST/ToDoList";
 import { Provider } from "react-redux";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -22,6 +24,7 @@ import UserContext from "./utils/userContext";
 import Instamart from "./components/Instamart";
 import store from "./utils/store";
 import Cart from "./components/Cart";
+import Demo from "./components/Demo";
 const Footer = obj.Footer;
 
 //Config Driven UI:
@@ -39,6 +42,7 @@ const AppLayout = () => {
     email: "support@namastedev.com",
   });
 
+  //u can modify ur user context using a provider.
   return (
     <Provider store={store}>
       {/* similar to React.Fragment */}
@@ -131,6 +135,14 @@ const appRouter2 = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/demo",
+        element: <Demo />,
+      },
+      {
+        path: "/ToDoList",
+        element: <ToDoList />,
       },
     ],
   },

@@ -5,13 +5,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    items: [],
+    items: ["bananas", "apples"],
   },
   reducers: {
     //Mapping between action and reducer ki which reducer will call which action.
     addItem: (state, action) => {
       state.items.push(action.payload);
-      //never return anything from here.Take a state and modify it.
+      //never return anything from here.It takes a state and directly modifies it.
     },
     removeItem: (state, action) => {
       state.items.pop();

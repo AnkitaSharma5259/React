@@ -63,6 +63,7 @@ const Body = () => {
     <>
       <div className="search-container"></div>
       <input
+        data-testid="search-input"
         type="text"
         className="search-input"
         placeholder="Search"
@@ -74,6 +75,7 @@ const Body = () => {
       {/* // This is known as two way data binding. */}
       {/* <h1>{searchClicked}</h1> */}
       <button
+        data-testid="search-btn"
         className="search-btn"
         onClick={() => {
           const data = filterData(searchText, allRestaurants);
@@ -104,7 +106,7 @@ const Body = () => {
       ></input>
 
       {/* <h1>{searchText}</h1> */}
-      <div className="restaurant-list">
+      <div className="restaurant-list" data-test="res-list">
         {/* <RestrauntCard restraunt={restrauntList[0]} /> */}
         {/* Instead of writing and passing each prop separately we can use spread operator */}
         {/* <RestrauntCard {...restrauntList[0].data} />

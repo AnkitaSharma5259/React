@@ -16,13 +16,19 @@ const RestaurantMenu = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddItem = () => {
-    //dispatch an action.
-    dispatch(addItem("Grapes")); //{payload:"Grapes"}
-  };
+  // const handleAddItem = () => {
+  //   //dispatch an action.
+  //   dispatch(addItem("Grapes")); // {payload:"Grapes"} Behind the scenes react might be creating
+  // an object with a payload.
+  // };
 
+  //work of dispatch method is , it triggers the action method.
   const addFoodItem = (item) => {
     dispatch(addItem(item));
+  };
+
+  const handleAddItem = () => {
+    dispatch(addItem("Grapes")); // dispatch an action and pass the payload.
   };
 
   return !restaurant ? (
@@ -38,12 +44,11 @@ const RestaurantMenu = () => {
         <h3>Rating: {restaurant?.avgRating} stars</h3>
         <h3>Cost of two: {restaurant?.costForTwoMsg}</h3>
       </div>
-      {/* <div>Restaurant Menu: {console.log("restaurant", restaurant)}</div> */}
+      {/* Dispatch an action  */}
       <div>
         <button
-          onClick={() => {
-            handleAddItem();
-          }}
+          className="p-2 m-5 bg-green-100"
+          onClick={() => handleAddItem()}
         >
           Add Item
         </button>

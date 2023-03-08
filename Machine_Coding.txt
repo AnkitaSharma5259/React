@@ -1,0 +1,74 @@
+Some companies take machine interview round in html, css and vanilla js.
+
+Build an app in react js.
+
+To Do list, forms, carousel, api filterData infinite or virtual scroll
+higher order componenets, debouncing, authentication react app. counter, chat application,
+pagination , create redux store, cocktaildb using cocktaildb api.
+
+Quiz app, CRUD, Forms with Nested Checkbox, Map Filter reduce, concurrent booking of movie ticket
+
+Authntication and Authorization
+
+Machine Coding Round: Time is the toughest to crack.
+
+u have to build the whole app in 1-2 hours and interviewer is watching u.
+By practice, u can avoid the pressure.
+
+Planning will help us in the interview. Planning and execution.
+
+We are going to build utube in the next 2 hours.
+
+Managing time.
+
+Building YouTube App: 5 mins.
+1. Clear the requirements. (Requirements clarification).
+2. Features (discuss about features , u r going to develop.)
+3. Tech Stack. (With React I would choose tailwind, typescript or js, redux or content api)
+   Redux. for styling i will use tailwind (its a modern framework, we can develop apps very fast)
+   It gives u lot of reusable classes, it keeps uniformity, it is customizable, extensible.
+   material,  (bundler, Redux,Tailwind,Js,Testing framework).
+4. A Proper justification for every small damn thing.
+5. Formik.
+6. Routing (React-router-dom) for routing.
+7. Bundler (What bundler r u choosing).
+8. What testing library r u using. (React-testing-library).
+9. Storage.
+10. u r wasting ur time to do google search.
+
+Next 5 mins in planning things up:
+
+The more planning we will do, the better code we will write.
+
+2. structure and planning. Discuss UI design with interviewer.
+
+Dont create a mess and do proper planning.
+
+npx create-react-app: it will create a new react app for us.
+why it takes time.
+1). index.html, index.css, index.js npm install, we installed node also, we installed parcel, we configured our npm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

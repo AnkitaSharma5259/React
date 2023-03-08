@@ -1,0 +1,327 @@
+BOTS, machines, parsers, ATS.
+HR manager, Technical Interviewer.
+
+RESUME SHORTLISTINGG MACHINEWho is going to use this.
+
+ATS: applicant tracking system.
+MAke ur resume ATS friendly.
+
+3 types of people:
+1. BOTS - ATS friendly
+2. Recruiters
+3. 1:1 interviewers (Tech + managers)
+
+How to make ATS friendly resume?
+1. BOTS:
+1. Keywords. (Keep a section in ur resume. Skills section) (REact, REact JS, Javascript, frontend, fullstack, css,
+html, tailwind, redux, git, bootstrap).
+2.Give proper headings to your resume.
+
+2. Recruiters: 
+   avg time is 4-5 seconds.
+   For one job opening, recruitment percentage is just 1 %.
+   If 100 people r giving interviewers then maximum 1 or 2 people will be selected.
+a) Skills. b) College graduation year. c)Work experience section d)Contact Information (address not required)
+
+Dont Put photos in ur resume.
+
+If u r looking for a react developer then first thing should be mentioned in ur skills is REACT.
+How many no of years of exp do u have.
+
+NIT, BITS, IIT brand name matters a lot. Recruiters see this.
+Put down good CGPA if u have.
+
+Lets talk about interviewers now.
+
+Interviewers + Tech Managers. These two should be the major highlight of your projects.
+1. Projects (React Projects) 2. Challenging Project.
+(Explain these projects in 3-4 lines)
+2. Skills (Tailwind, redux, angular,vue, nextjs, nodejs also) . These people will be impressed.
+3. Good Keywords. (Good Technical keywords.)
+store, API, config driven UI,router, jest, lazyloading.
+
+I have developed utube clone. I have build an app which is a video streaming platform, which is a high scalable video streaming platform,
+I have built a Video Streaming App, scalable, optimized.
+
+u have developed large/high scalable, performant, fast loading, highly optimized search using debouncing.
+Deploy on free domains. Netlify and give a link along with each project.
+we have implemented caching using redux store. 
+Ur website is responsive, it has light/dark color theme. 
+
+n level nested comments. 
+4. Link along with each project.
+ Github link
+ Working Demo link.
+
+My app loads in less than 200ms or 100ms.
+Measure the performace, web page loading time. Its there in developer console.
+Lighthouse, check waterflow model in network tab for time.
+
+Why ur app is fast? What r u using.
+shimmer effect, lazy loading , search using debouncing, caching using redux store, bundle chunking, how reconciliation is working,
+first paint load time.
+I have applied lazy loading , I have applied suspense.
+
+I choose to use tailwind instead of material ui.
+Why tailwind?
+I was trying tailwind
+You dont have to write css again and again, it just shifts the amount of css u wrote, u can develop very fast using tailwind.
+The classes size blots up but the developer time building it is very fast.
+Tailwind: trending and more customization.
+
+I am using React along with parcel, webpack and bundlers.
+
+React-router-dom for routing.
+Talk about reconciliation alg, react fibre,
+action , dispatch, reducers.
+About microservice architecture, how did u build config driven ui
+
+
+Managers: 
+1. Communication skills
+2. Behavioural skills.
+3. Good Leader or not
+
+I have developed a project from scratch, it is production 
+Leading a team.
+Taken ownership.
+Mentor
+90% code coverage.
+code quality,
+Helped ur juniors onboard into team.
+Mentored other people
+Taken initiative.
+Collaboarated with ur product managers, designers and led the UI project.
+spoke with clients.
+
+Dont put in random stuff in ur resume.
+
+Extra stuff: Major ones. Dont write participation certifications. Random udemy or something.
+Certifications/: u r really proud of. like AWS certificate and so on.
+Achievements: employee of the quarter award.
+2000 questions on leetcode, github links.
+live project links.
+
+What u have to not do:
+Hobbies, address, random achievements, marital status, ur cool photo, time of birth, date of birth.
+won rangoli competition in district, declaration, gender, refrences.
+
+Best part is: linkedin Endorsements.
+
+Dont put objective in ur resume. It is not impressing anyone.
+
+Only : One page resume. 
+
+sections:
+1. Work experience: company names: and then Projects
+2. SKILLS or college degree.
+3. 
+
+
+top: name, phone email id, linkedin
+
+Project section.
+CLG
+SKill 
+Certifications/Achievements.
+
+1. Name, contact, email, linkedin
+2. Work experience - company name, projects
+3. Education College degree/schooling.
+4. SKILLS
+4. Achievements/Certifications
+
+technical blogs.
+reputation on github star.
+
+SIDE or personal projects.
+
+Every word that u write should have a meaning to it.
+
+when u change ur perspective, ur resume will change.
+
+In discord, in assignment section. put down ur resume.
+Also go to other resumes and give them feedback.
+Interviews: 
+Dont try to make ur resume which is disturbing for the eyes.
+
+so many people r color blind.
+only put black and white.
+
+Interviews: U have to give a good introduction.
+
+Introduction is the great chance to get urself comfortable with the interviewer.
+
+Tell me about urself?
+Ur introduction: Prepare for it.
+Dont start with ur name.
+TOP DOWN Approach: 
+1. Start describing high level details about u and of the projects u r working on.
+2. What team r u working in?
+3. talk about projects 
+4. What is the challenging stuff u have done in ur project. (obstacles faced)
+
+I was implementing search bar , so it will increase no of calls , then i used debouncing and i further implemented caching.
+because search is widely used so to reduce network calls.
+
+I was trying to build lot of forms, then i got alibrary called formik.
+
+Compoany/Team/Projects.
+
+Im currently working as a Senior development engineer 2 at Medibuddy. Before MeDibuddy i was working in sincro digital.
+I am working as part of the 6 member opstech team where im leading two UI Projects.
+One of them is accounting rule portal which helps us setup etc.
+
+
+
+You can talk about second projects also.
+
+Now these projects were build using reactJs, we also use node js, we also use etc.
+
+I have build a utube type of application. In that projects im implemented major cool features like search feature using debouncing,
+chunking, lazy loading to optimize my app.
+
+Keep digging it until the interviewer stops u.
+
+u r unfolding the levels one by one.
+
+Take pauses in between.
+
+Now interviewer will ask u about ur projects. That will be a good icebreaker.
+
+Ask ur m,anagers/product managers about the impact of the project.
+U should know that why r u building that project.
+
+I was leading a team of 2, i was involved into group dis, code reviews, design disc, mentoring juniors.
+
+What if u r changing ur domain?
+
+System design would be same.
+
+Talk about something which will impress the interviewer.
+
+About freshers. Do reverse engineering.
+
+
+Towards the End. Ask good questions:
+
+1. Use this time to know more about team /company.
+2. what is the recent project u r working on?
+3. Do u use any testting frameowrk in ur company?
+4. Do u do system design?
+5. R there any code reviewes practices u r using?
+6. What all technologies ur companies r using?
+what is ur team focusing on?
+What tech stack r u working on?
+Do u use redux or u use something else to manage data?
+How deployment cycle works in ur company?
+
+Dont ask about holidays, laptops
+
+Before Interview: Plan urself ahead. Be calm, dont learn extra stuff. Pray to God for inner peace.
+Kepp notebook and pen ready. Kepp water bottles, Keep ur laptop charged, Keep wifi backup.
+Test it down properly, some random platforms. Always use an external microphone.
+Use headset.
+
+dress decent.
+Dont have ur goggles on. 
+Dont have tshirt woth random slogans written it.
+
+Quote: 15mins of call will decide what u r going to earn for the next 4-5 yrs.
+
+KRAS and KPI: Target.
+
+There is always a scope of increment 100% of the time.
+
+Always ask what is the maximum budget u have for this role.
+The first offer is not the final offer.
+
+it is no bodys fault if u r underpaid. First have confidence that u can earn more.
+
+There is a range. no fixed ctc for a role. Try to put urself higher on that range.
+How would u do that. First of all with knowledge.
+
+do research, Fishbowl, GlassDoor, AmbitionBox
+LEVELS.FYI
+
+What the company is offering u. It is at the higher end or lower end. If ur previous ctc is already high then sometimes,
+It is less scope of increment.
+
+Dont go with empty hand before going to negotiation call.
+
+Ask for what u deserve. That's okay.
+Negotiation is not unprofessional.
+
+Always quote a higher number.
+
+we cant offer u more than 30% of ur CTC that is bullshit.
+
+quote a number. dont tell in terms of percentage.
+40LPA.
+
+Never fall in that trap that it will increase more.
+be conscious that eshops r not part of ur salary.
+
+Uber stocks r listed in stock exchange. I can trade in.
+
+If company is startup then eshops is just paper money.
+
+Always negotiate on base salary that hits ur account.
+At the end of the day those eshops will turn to 0. when u leave ur job, u canot carry ur eshops.
+
+Buyback eshops. Companies buy those eshops and will give u money in return of that.
+Have a firm voice.
+I deserve this.
+
+Never look for percentage hike, always see numbers.
+
+quote a no directly.
+Dont justify urself.
+Everyday u will put ur heart and soul into the work.
+
+if u say no to that offer letter.
+
+If u r reducing ur notice period ask for a joining bonus always.
+
+if u have confidence in ur skills, u will always get hired.
+
+The world is looking for good software engineers.
+Because there are very less good software engineers available.
+
+If u r a good software enginner then u will always be in demand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

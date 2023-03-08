@@ -4,7 +4,7 @@ import useOnline from "../utils/useOnline";
 import { Title } from "./Title";
 import UserContext from "../utils/userContext";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux"; //bridge between ur react store and ur component.
 
 const loggedInUser = () => {
   //API call to check authentication.
@@ -45,12 +45,16 @@ export const Header = () => {
             <Link to="/instamart">Instamart</Link>
           </li>
           <li>
-            <Link to="/cart">Cart {cartItems.length} items</Link>
+            <Link to="/cart" data-testid="cart">
+              Cart {cartItems.length} items
+            </Link>
           </li>
         </ul>
       </div>
 
-      <h1>{isOnline ? "You are online" : "You are offline"}</h1>
+      <h1 data-testid="online-status">
+        {isOnline ? "You are online" : "You are offline"}
+      </h1>
       <h1 className="p-10 font-bold text-red-900">
         {user.name}-{user.email}
       </h1>

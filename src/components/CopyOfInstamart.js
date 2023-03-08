@@ -19,7 +19,11 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
 
 const Instamart = () => {
   //Now parent will control these sections.
-  const [visibleSection, setVisibleSection] = useState("careers");
+  const [sectionConfig, setSectionConfig] = useState({
+    showAbout: true,
+    showTeam: false,
+    showCareers: true,
+  });
   return (
     <div>
       <Section
@@ -27,10 +31,14 @@ const Instamart = () => {
         description={
           "This is the about section of instamart.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
-        isVisible={visibleSection === "about"}
-        setIsVisible={(value) => {
-          value ? setVisibleSection("about") : setVisibleSection("");
-        }}
+        isVisible={sectionConfig.showAbout}
+        setIsVisible={() =>
+          setSectionConfig({
+            showAbout: true,
+            showTeam: false,
+            showCareers: false,
+          })
+        }
       />
 
       <Section
@@ -38,10 +46,14 @@ const Instamart = () => {
         description={
           "This is the Team section of instamart. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
-        isVisible={visibleSection === "team"}
-        setIsVisible={(value) => {
-          value ? setVisibleSection("team") : setVisibleSection("");
-        }}
+        isVisible={sectionConfig.showTeam}
+        setIsVisible={() =>
+          setSectionConfig({
+            showAbout: false,
+            showTeam: true,
+            showCareers: false,
+          })
+        }
       />
 
       <Section
@@ -49,10 +61,14 @@ const Instamart = () => {
         description={
           "This is the Team section of instamart. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
-        isVisible={visibleSection === "careers"}
-        setIsVisible={(value) => {
-          value ? setVisibleSection("careers") : setVisibleSection("");
-        }}
+        isVisible={sectionConfig.showCareers}
+        setIsVisible={() =>
+          setSectionConfig({
+            showAbout: false,
+            showTeam: false,
+            showCareers: true,
+          })
+        }
       />
 
       <h2>100s of Components inside it</h2>

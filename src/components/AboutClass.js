@@ -28,6 +28,7 @@ class AboutClass extends Component {
       <div>
         <h1>About Us Page</h1>
         <UserContext.Consumer>
+          {/* {(value)=>console.log(value)} */}
           {({ user }) => {
             <h1>
               {user.name}- {user.email}
@@ -46,6 +47,14 @@ class AboutClass extends Component {
 
 export default AboutClass;
 
+/*
+This component takes a jsx which is a function.
+This function will have a value of this context.
+<UserContext.Consumer>
+{ {(value)=>console.log(value)}}
+</UserContext.Consumer>
+
+*/
 // // Order of call
 // // Contructor => render => ComponentDidMount
 // // where do we initialize state: Contructor.

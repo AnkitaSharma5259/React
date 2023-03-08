@@ -680,11 +680,11 @@ Accordion Component: Toggle Component.
 Currently components do not share state.
 Every section has its own state and has its own prop.
 
-We cannot directly modify the state of 
-
-This concept is known as lifting the state up:
+We cannot directly modify a state of another sibling from one component.
+so we will take the control of these childrens and will maintain state at parent.
+This concept is known as lifting the state up.
 If the parent maintains a state, every children will listen to it.
-I will take the control of show /hide from this children to the parent.
+I will take the control of show /hide from these children to the parent.
 
 Profiling watches what u do on the web page.
 It shows how much every component took to load.
@@ -855,3 +855,32 @@ This big object structure is known as virtual DOM.
 
 
 useAuth , useLocalStorage which will give u access to local storage hooks.
+
+u can take the key with react fragment but u cannot take the class name.
+
+Pass data from child to parent: https://codesandbox.io/s/eloquent-julien-ocqbwt?file=/src/user.js
+
+Problems with Redux:
+1. It has a huge learning curve.
+2. It is very complex to setup.
+3. If ur application is very small then u dont need redux.
+4. Only use it when u r building a large scale applicationwhich involves lot of data handling.
+
+What is Redux store? At the end of the day. Redux store is like a big all object which have diff
+sections. Those sections are small peices.
+
+Just like context, all components can access redux store.
+
+We can have multiple contexts but in redux we will a single store to configure everything.
+
+We will create slice of our store. Each store can have diff slices of the store.
+
+What all slice can our app have? 
+
+It can have a user slice, authentication slice, cart slice etc.
+A slice is a small portion of your store.
+Our components cannot directly modify the store. we need to dispatch an action.
+
+
+
+

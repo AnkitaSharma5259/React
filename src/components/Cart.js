@@ -15,7 +15,8 @@ const Cart = () => {
       <button className="btn-green" onClick={() => handleClearCart()}>
         Clear Cart
       </button>
-      <div>
+      <div className="flex">
+        {/* <FoodItem {...cartItems[0]} /> */}
         {cartItems.map((item) => {
           <FoodItem key={item.id} {...item} />;
         })}

@@ -1,0 +1,35 @@
+Inside store we can have a lot of small slices in our store.
+Our components cannot directly modify the store.
+To modify the slice in the store , we will have to dispatch an action.
+
+We cannot directly modify our cart.
+
+We dispatch an action , will calls the function, which modifies the slice of the store.
+This function is known as reducer.
+
+using selector u will get the access of the store.
+selection means portion of the store.
+
+Plus Button => dispatches an action => calls the reducer function => Updates slice of the store => 
+selector => updates cart. 
+
+What is selector at the end of the day? It is a hook. useSelector. 
+Hook is a function at the end of the day.
+
+When we use selector, it is known as subscribing to the store.
+
+
+TODOLIST IN REACT JS.
+
+https://codesandbox.io/s/gracious-aryabhata-f3lv8h?file=/src/List.js
+
+
+
+
+
+
+
+
+
+
+

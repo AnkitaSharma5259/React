@@ -1,0 +1,127 @@
+How to test your application using JEST + React testing library.
+enzyme vs react-testing-library
+(Mocha)
+Latest in industry react-testing-library is being used. It uses JEST behind the scenes.
+
+Setting up testing is quite complex.
+
+npm install --save-dev @testing-library/react
+
+Why do we need test cases? 
+
+All components are inter related to each other.
+The changes done by other team person can break my code.
+
+Test driven development:
+We write test cases even before we write our code.
+
+Different types of testing:
+1. Manual testing.
+2. Automation testing. (Selenium) 
+
+3. (End to End testing conver entire user journey. (This part is offloaded to QA team).
+Headless browser: It is kind of like an actual browser but it does not show anything. 
+It is a viewport without UI.Replacing the Manualtesting with code.
+In headless browser also, there will be a virtual DOM.
+
+4. Unit Testing: Testing small units. EG: When my app opens, is my header loading or not, 
+is my logo coming properly or not. IS my card loading or not.
+
+5. Integration Testing: TEsting the Integration between the components.
+Testing a basic feature or user behaviour.
+
+Testing library offers testing for react, library, veu
+React testing library is a part of testing library.
+
+JEST: It is a delightful js testing framework with a focus on simplicity.
+
+1. npm install --save-dev @testing-library/react
+2. npm i -D jest (Testing library is dependent on jest)  (Check package.json)
+3. npx jest --init (Configure Jest). npx because we just want to do it only once).
+4. first select no then jsdom, yes for coverage report, which provider should be used: babel, then yes for 
+
+
+npx jest --init 
+
+The following questions will help Jest to create a suitable configuration for your project
+
+✔ Would you like to use Typescript for the configuration file? … no
+✔ Choose the test environment that will be used for testing › jsdom (browser-like)
+✔ Do you want Jest to add coverage reports? … yes
+✔ Which provider should be used to instrument code for coverage? › babel
+✔ Automatically clear mock calls, instances, contexts and results before every test? … yes
+
+How do u run these testcases? npm run test
+ "test": "jest"
+
+5. npm i -D jest-environment-jsdom  (because we got version error.)
+6. Create first test file. It is also known as dunder.
+
+SyntaxError: Cannot use import statement outside a module
+WE will need to take help of babel in this.
+
+7. Configure Babel.
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+we will take help of babel to understand import.
+8. preset env
+
+.babelrc or babel.config.js
+
+babelrc file requires json and not javascript object.
+we have to convert js object to json. (json is diff than js object)
+
+Our tests running in a different environment that is jest environment and not running on browser.
+
+To make jest understand, we configured babel.
+Babel will help your jest now.
+Babel is a transpiler.
+
+Coverage folder gives u the coverage report.
+
+9. Wrote expect sum test
+10. gitignore coverage report.
+
+JSDOM trying to read this image as a javascript, thats why throwing error.
+We will create a mock image/ dummy image for testing.
+
+import { StaticRouter } from "react-router-dom/server"; //This router can work without browser.
+in test cases createBrowserRouter will not work.
+
+Babel convert jsx to virtual DOM object.
+
+getAllByTestId is similar to getElementById
+This is the test id for uniqueness not the actual DOM Id.
+
+/**
+ *
+ *  Different Type of Testing??
+ *  - Manual Testing
+ *  - Autmation Testing
+ *      - Selenium Testing
+ *
+ *
+ *  - E2E Testing - Covers entire user Journey
+ *
+ *  - Unit Testing
+ *  - Integration Testing
+ *
+ 
+ * - Install React Testing Librabry
+ * - Install Jest
+ * - configure Jest
+ * - Installed jest-environment-jsdom
+ * - Create my first test
+ * - Configure babel
+ * - Wrote expect sum test
+ * - gitignore coverage report
+ *
+ */
+
+
+
+
+
+
+
+

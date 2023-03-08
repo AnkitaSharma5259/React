@@ -1,0 +1,36 @@
+Q - What is DOM? 
+DOM stands for document object model, it is the in memory represenatation of our HTML in the form of objects.
+
+Shadow DOM lets us create custom components.In other words shadow DOM creates scoped DOM trees inside our elements.
+
+Virtual DOM is an abstraction on top of the actual DOM where an ideal or virtual represenatation of the UI is kept in 
+memory and synced with the real DOM.
+
+Q: How do u pass data from child to parent component: using callback function.
+https://codesandbox.io/s/eloquent-julien-ocqbwt?file=/src/App.js
+
+Q- What is Pure Component in React JS?
+Pure component stops the rerendering of ur component.
+This is for state.
+https://codesandbox.io/s/funny-benji-fqoqu4?file=/src/App.js
+
+This is for props.
+https://codesandbox.io/s/wandering-pine-pzuhdq?file=/src/User.js
+
+Q: Why do we need to write this inside constructo? Why the method is not directly available on this?
+ this.handleClick = this.handleClick.bind(this);
+Binding of the event handler using bind method.
+https://codesandbox.io/s/pensive-jepsen-fmevzt?file=/src/this.js
+
+Q: Create Timer:
+https://codesandbox.io/s/wizardly-bardeen-z19osy?file=/src/Timer.js
+
+To increase the performance of the web application , we use usememo and usecallback hooks.
+Q: useMemo:
+https://codesandbox.io/s/pedantic-albattani-irt3z3?file=/src/Memo.js
+
+Q:useCallback:
+
+
+
+
